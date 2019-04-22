@@ -1,0 +1,20 @@
+{% extends "layouts.html" %}
+{%block content%}
+    <table>
+        <tr>
+            <th> Username </th>
+            <th> Date </th>
+            <th>Criteria</th>
+            <th>location</th>
+        </tr>
+    {% for twitter_data in twitter_data %}
+        
+            <tr>
+                <td> {{twitter_data.username}} </td>
+                <td> {{twitter_data.date}}</td>
+                <td>{{twitter_data.criteria}}</td>
+                <td>{{twitter_data.location}}</td>
+            </tr>              
+    </table>
+    {% endfor %}
+{% endblock content %}
